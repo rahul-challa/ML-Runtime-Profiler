@@ -2,11 +2,11 @@
 
 A lightweight Python-based profiling tool that analyzes inference latency in transformer-based models using PyTorch and HuggingFace Transformers.
 
-## 🧠 Goal
+## Goal
 
 Demonstrate understanding of performance bottlenecks in ML workloads by building a comprehensive runtime profiler that analyzes inference latency in transformer-based models like DistilBERT or MiniLM.
 
-## 🔍 Features
+## Features
 
 - **Model Loading**: Supports any HuggingFace transformer model
 - **Detailed Profiling**: Uses `torch.profiler` to measure:
@@ -20,7 +20,7 @@ Demonstrate understanding of performance bottlenecks in ML workloads by building
 - **ONNX Comparison**: Optional comparison between ONNX Runtime and PyTorch
 - **CLI Interface**: Easy-to-use command-line arguments
 
-## 🔧 Tools & Technologies
+## Tools & Technologies
 
 - **Python 3.8+**
 - **PyTorch** - Deep learning framework
@@ -30,7 +30,7 @@ Demonstrate understanding of performance bottlenecks in ML workloads by building
 - **ONNX Runtime** - Optimized inference engine
 - **NumPy** - Numerical computations
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ML Runtime Profiler/
@@ -44,7 +44,7 @@ ML Runtime Profiler/
     └── trace_*.json    # TensorBoard traces
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Installation
 
@@ -91,7 +91,7 @@ python compare_onnx.py --model distilbert-base-uncased --batch-size 4 --num-runs
 | `--num-runs` | int | `10` | Number of comparison runs |
 | `--output` | str | `auto` | Output filename |
 
-## 📊 Output Analysis
+## Output Analysis
 
 ### Profiling Results
 
@@ -105,16 +105,16 @@ The profiler generates detailed JSON reports containing:
 ### Sample Output
 
 ```
-📊 ML RUNTIME PROFILER RESULTS SUMMARY
+ML RUNTIME PROFILER RESULTS SUMMARY
 ============================================================
-🤖 Model: distilbert-base-uncased
-💻 Device: cuda
-📦 Batch Size: 4
-📏 Sequence Length: 128
-🔄 Number of Runs: 5
-⏰ Timestamp: 2024-01-15T10:30:45.123456
+ Model: distilbert-base-uncased
+ Device: cuda
+ Batch Size: 4
+ Sequence Length: 128
+ Number of Runs: 5
+ Timestamp: 2024-01-15T10:30:45.123456
 
-⏱️  TIMING STATISTICS (milliseconds):
+TIMING STATISTICS (milliseconds):
 ----------------------------------------
 Tokenization:
   Mean: 2.45 ± 0.12
@@ -128,7 +128,7 @@ Total:
   Mean: 17.68 ± 0.91
   Range: 16.43 - 18.12
 
-🔍 DETAILED ANALYSIS:
+DETAILED ANALYSIS:
   Attention Layer Avg: 8.45 ms
   Embedding Avg: 2.12 ms
   Total CPU Time: 3.21 ms
@@ -139,14 +139,14 @@ Total:
 ### ONNX Comparison Results
 
 ```
-📊 ONNX RUNTIME vs PYTORCH COMPARISON SUMMARY
+ONNX RUNTIME vs PYTORCH COMPARISON SUMMARY
 ======================================================================
-🤖 Model: distilbert-base-uncased
-📦 Batch Size: 4
-🔄 Number of Runs: 10
-⏰ Timestamp: 2024-01-15T10:35:22.654321
+Model: distilbert-base-uncased
+Batch Size: 4
+Number of Runs: 10
+Timestamp: 2024-01-15T10:35:22.654321
 
-⏱️  INFERENCE TIMES (milliseconds):
+INFERENCE TIMES (milliseconds):
 --------------------------------------------------
 PyTorch:
   Mean: 15.23 ± 0.89
@@ -158,16 +158,16 @@ ONNX Runtime:
   Range: 11.89 - 13.21
   Median: 12.38
 
-🚀 SPEEDUP ANALYSIS:
+SPEEDUP ANALYSIS:
   Mean Speedup: 1.22x
   Best Speedup: 1.35x
   Worst Speedup: 1.08x
 
-✅ ONNX Runtime is 1.22x faster on average
+ONNX Runtime is 1.22x faster on average
 ======================================================================
 ```
 
-## 🎯 Skills Demonstrated
+## Skills Demonstrated
 
 ### ML Systems Performance Understanding
 - Profiling attention mechanisms and embedding layers
@@ -187,7 +187,7 @@ ONNX Runtime:
 - Device-specific optimizations
 - Profiling GPU operations
 
-## 🔍 Advanced Usage
+## Advanced Usage
 
 ### TensorBoard Visualization
 
@@ -230,7 +230,7 @@ for batch_size in 1 2 4 8 16; do
 done
 ```
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -253,7 +253,7 @@ done
 - **Sequence Length**: Shorter sequences are faster
 - **Warmup**: First run includes model compilation time
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 - [ ] Support for more model architectures (GPT, T5, etc.)
 - [ ] Memory profiling and optimization suggestions
@@ -262,10 +262,10 @@ done
 - [ ] Automated performance regression testing
 - [ ] Support for quantized models
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to submit issues, feature requests, or pull requests to improve the profiler!
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License. 
